@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria - Arquitectura Limpia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Juego de Memoria</h1>
+        
+        <div class="controls">
+            <label for="difficulty">Dificultad:</label>
+            <select id="difficulty">
+                <option value="4">Fácil (4 parejas)</option>
+                <option value="8" selected>Normal (8 parejas)</option>
+                <option value="12">Difícil (12 parejas)</option>
+            </select>
+            
+            <button id="reset-btn">Reiniciar (R)</button>
+        </div>
+
+        <div class="stats">
+            <div>Movimientos: <span id="moves-counter">0</span></div>
+            <div>Mejor Puntaje: <span id="best-score">-</span></div>
+        </div>
+
+        <div id="game-board" class="board"></div>
+
+        <div id="victory-message" class="victory-message hidden">
+            <h2>¡Felicidades! ¡Has ganado!</h2>
+            <p>Completaste el juego en <span id="final-moves">0</span> movimientos.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
